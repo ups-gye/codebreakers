@@ -47,6 +47,8 @@ body, html {
     align-items: center;
     text-align: center;
     z-index: 1; /* Asegura que el contenido esté por encima de la imagen */
+    padding: 20px; /* Añade algo de espacio alrededor */
+    box-sizing: border-box;
 }
 
 #gameCanvas {
@@ -88,4 +90,38 @@ body, html {
 
 #difficultyButton:hover {
     background-color: #007BB5;
+}
+
+.score-box {
+    padding: 20px;
+    background-color: #e0f7da;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 80%; /* Ajusta según sea necesario */
+    max-width: 300px; /* Ajusta según el espacio disponible */
+    margin: 0 auto 20px auto;
+}
+
+#leaderboard {
+    width: 100%;
+    max-width: 600px; /* Ajusta este valor según el espacio disponible */
+    margin: 0 auto; /* Centra la tabla */
+    border-collapse: collapse;
+}
+
+#leaderboard th, #leaderboard td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+#leaderboard th {
+    background-color: #4CAF50;
+    color: white;
+}
+#username {
+    position: relative; /* Asegura que el campo no esté cubierto por otro elemento */
+    z-index: 10; /* Asegura que esté en la parte superior */
 }

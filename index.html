@@ -9,26 +9,49 @@
 <body>
 
     <div id="startScreen" class="center">
-        <img src="./IMA/registro-removebg-preview.png" id="backgroundImage" alt="Background" class="background-img"><!-- FONDO REGRISTO-->
+        <img src="./IMA/registro-removebg-preview.png" id="backgroundImage" alt="Background" class="background-img">
         <h1>Bienvenido al Juego de Multiplicación</h1>
-        <input type="text" id="username" placeholder="Ingresa tu nombre de usuario">
+        <input type="text" id="username" placeholder="Nombre de usuario" >
+
         <button id="registerButton">Registrarse</button>
         <button id="startButton">Comenzar Juego</button>
         <button id="difficultyButton">Dificultad: Easy</button>
     </div>
     
     <div id="gameOverScreen" class="center" style="display: none;">
-        <img src="./IMA/registro-removebg-preview.png" id="backgroundImage" alt="Background" class="background-img"><!-- FONDO FIN JUEGO-->
+        <img src="./IMA/registro-removebg-preview.png" id="backgroundImage" alt="Background" class="background-img">
         <h1>Juego Terminado</h1>
-        <p id="finalScore"></p>
-        <p id="finalName"></p>
-        <button id="replayButton">Volver a Jugar</button><!-- TITULO-->
+
+        <!-- Cuadro con el nombre y el puntaje del jugador -->
+        <div class="score-box">
+            <p id="finalScore"></p>
+            <p id="finalName"></p>
+        </div>
+
+        <button id="replayButton">Volver a Jugar</button>
+        <button id="backToStartButton">Volver al Inicio</button>
+
+        <!-- Tabla de clasificación -->
+        <h2>Tabla de Clasificación</h2>
+        <table id="leaderboard">
+            <thead>
+                <tr>
+                    <th>Posición</th>
+                    <th>Jugador</th>
+                    <th>Puntaje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se insertarán las filas de la tabla mediante JavaScript -->
+            </tbody>
+        </table>
     </div>
 
     <div id="flash" class="flash"></div>
 
-    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <canvas id="gameCanvas" width="950" height="750"></canvas>
 
+    <script src="/socket.io/socket.io.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
